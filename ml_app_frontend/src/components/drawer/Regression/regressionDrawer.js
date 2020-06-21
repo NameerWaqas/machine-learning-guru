@@ -6,12 +6,10 @@ import Divider from '@material-ui/core/Divider';
 import Drawer from '@material-ui/core/Drawer';
 import Hidden from '@material-ui/core/Hidden';
 import IconButton from '@material-ui/core/IconButton';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import MailIcon from '@material-ui/icons/Mail';
 import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -196,34 +194,37 @@ function ResponsiveDrawerRegression(props) {
                 </Hidden>
             </nav>
             <main className={classes.content} id='mainGridHome'>
+                {/* Component placed here will be seen inside the main body of Drawer */}
                 <div className={classes.toolbar} />
 
                 <Switch>
+                    {/* Exact Route */}
                     <Route exact path='/regression/blogs'>
                         <RegressionComponent />
                     </Route>
-                    <Route  path='/regression/blogs/regression-introduction'>
+                    <Route path='/regression/blogs/regression-introduction'>
+                        {/* Till date there is no component available for the stuff,yet passed a heading to fill the space. */}
                         <h1>Regression Introduction</h1>
                     </Route>
-                    <Route  path='/regression/blogs/slope-and-intercept'>
-                        <SlopeAndIntercept/>
+                    <Route path='/regression/blogs/slope-and-intercept'>
+                        <SlopeAndIntercept />
                     </Route>
-                    <Route  path='/regression/blogs/linear-regression'>
+                    <Route path='/regression/blogs/linear-regression'>
                         <h1>Linear Regression</h1>
                     </Route>
-                    <Route  path='/regression/blogs/multiple-linear-regression'>
+                    <Route path='/regression/blogs/multiple-linear-regression'>
                         <h1>Multiple Linear Regression</h1>
                     </Route>
-                    <Route  path='/regression/blogs/polynomial-regression'>
+                    <Route path='/regression/blogs/polynomial-regression'>
                         <h1>Polynomial Regression</h1>
                     </Route>
-                    <Route  path='/regression/blogs/bias-variance-tradeoff'>
+                    <Route path='/regression/blogs/bias-variance-tradeoff'>
                         <h1>Bias Variance Tradeoff</h1>
                     </Route>
-                    <Route  path='/regression/blogs/regularization-in-regression'>
+                    <Route path='/regression/blogs/regularization-in-regression'>
                         <h1>Regularization in Regression</h1>
                     </Route>
-                    <Route  path='/regression/blogs/generalization-in-regression'>
+                    <Route path='/regression/blogs/generalization-in-regression'>
                         <h1>Generalization in Regression</h1>
                     </Route>
                 </Switch>

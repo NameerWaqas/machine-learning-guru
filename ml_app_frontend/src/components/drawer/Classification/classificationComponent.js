@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import SimpleCard from '../../card/home/card'
-import Aos from 'aos'
+import SimpleCard from '../../card/simpleCard/card'     //Card without image
+import Aos from 'aos'       //package to animate components onScroll
 
 
 export default function ClassificationComponent() {
@@ -35,6 +35,7 @@ export default function ClassificationComponent() {
             link: '/classification/blogs/naive-bias'
         },
     ]
+    
     let anim = ['fade-up', 'fade-right', 'fade-left']
 
     return (

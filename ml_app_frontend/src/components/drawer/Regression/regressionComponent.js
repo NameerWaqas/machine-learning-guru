@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import SimpleCard from '../../card/home/card'
+import SimpleCard from '../../card/simpleCard/card'
 import Aos from 'aos'
 
 

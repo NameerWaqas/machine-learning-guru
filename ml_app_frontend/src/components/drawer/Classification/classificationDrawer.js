@@ -16,14 +16,12 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import HomeIcon from '@material-ui/icons/Home';
 import DescriptionIcon from '@material-ui/icons/Description';
-import { Link } from 'react-router-dom';
 import {
+    Link,
     Switch,
     Route,
     useRouteMatch
 } from "react-router-dom";
-// import { Switch } from '@material-ui/core';
-// import HomeComponent from '../homepage/homeComponet';
 import ClassificationComponent from '../Classification/classificationComponent'
 
 
@@ -182,27 +180,30 @@ function ResponsiveDrawerClassification(props) {
                 </Hidden>
             </nav>
             <main className={classes.content} id='mainGridHome'>
+                {/* Component placed here will be seen inside the main body of Drawer */}
                 <div className={classes.toolbar} />
                 <Switch>
+                    {/* Exact Route */}
                     <Route exact path='/classification/blogs'>
                         <ClassificationComponent />
                     </Route>
-                    <Route exact path='/classification/blogs/classification-introduction'>
+                    <Route path='/classification/blogs/classification-introduction'>
+                        {/* Till date there is no component available for the stuff,yet passed a heading to fill the space. */}
                         <h1>Classification Introduction</h1>
                     </Route>
-                    <Route exact path='/classification/blogs/knn'>
+                    <Route path='/classification/blogs/knn'>
                         <h1>KNN</h1>
                     </Route>
-                    <Route exact path='/classification/blogs/decision-tree'>
+                    <Route path='/classification/blogs/decision-tree'>
                         <h1>Decision Tree</h1>
                     </Route>
-                    <Route exact path='/classification/blogs/svm'>
+                    <Route path='/classification/blogs/svm'>
                         <h1>SVM</h1>
                     </Route>
-                    <Route exact path='/classification/blogs/logistic-regression'>
+                    <Route path='/classification/blogs/logistic-regression'>
                         <h1>Logisctic Regression</h1>
                     </Route>
-                    <Route exact path='/classification/blogs/naive-bias'>
+                    <Route path='/classification/blogs/naive-bias'>
                         <h1>Naive Bias</h1>
                     </Route>
                 </Switch>

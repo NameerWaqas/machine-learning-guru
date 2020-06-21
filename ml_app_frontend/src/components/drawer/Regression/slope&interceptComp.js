@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux'
 import { HandleIntercept, HandleSlope, HandleBreadcrumb } from '../../../Redux/actionCreator';
-import { CustomInput, FormGroup, Label } from 'reactstrap/';
+import { CustomInput, Label } from 'reactstrap/';
 import Grid from '@material-ui/core/Grid';
-// import Breadcrumbs from '@material-ui/core/Breadcrumbs';
 import Chart from '../../plots/simplePlots/plot'
 import {
     Switch,
@@ -11,7 +10,7 @@ import {
     Link,
     useRouteMatch
 } from "react-router-dom";
-import { Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavLink } from 'reactstrap';
+import { Nav, NavItem,  NavLink } from 'reactstrap';
 
 const mapDispatchToProps = (dispatch) => ({
     UpdateIntercept: (e) => dispatch(HandleIntercept(e)),
@@ -27,14 +26,15 @@ const mapStateToProps = (state) => ({
 function SlopeAndIntercept(props) {
     let match = useRouteMatch()
     let state = props.mainState.regression
-    let xCord = []
+    let xCord = [] //Dummy variables
     let yCord = []
-    for (var i = 0; i <= 10; i++) {
+
+    for (var i = 0; i <= 10; i++) { //Dummy data
         xCord.push(i)
         let yVal = parseInt(state.slopeIntercept.slope) * i + parseInt(state.slopeIntercept.intercept)
         yCord.push(yVal)
     }
-    window.scrollTo(0,254)
+
     return (
         <div >
             <Grid conatiner justify='center' alignItems='center' >
@@ -49,8 +49,7 @@ function SlopeAndIntercept(props) {
                 </p>
                 </Grid>
 
-                {/* <ActiveLastBreadcrumb /> */}
-                <Example mainState={props.mainState} UpdateBreadcrumbState={props.UpdateBreadcrumbState} />
+                <Tabs mainState={props.mainState} UpdateBreadcrumbState={props.UpdateBreadcrumbState} />
 
                 <Grid item sm={12} md={12} lg={12} xs={12} id='plotSection'>
                     <Switch>
@@ -71,22 +70,26 @@ function SlopeAndIntercept(props) {
 
                 </Grid>
             </Grid>
-            {/* <FormGroup className> */}
             <div>
                 <Label for="exampleCustomRange">Slope: {state.slopeIntercept.slope}</Label>
+                {/* Slider for slope */}
                 <CustomInput type="range" min="0" max="10" defaultValue="0"
                     id="exampleCustomRange" name="customRange" onChange={(e) => { props.UpdateSlope(e.target.value) }} />
+
+                {/* Slider for intercept */}
                 <Label for="exampleCustomRange">Intercept: {state.slopeIntercept.intercept}</Label>
                 <CustomInput type="range" min="0" max="10" defaultValue="0"
                     id="exampleCustomRange" name="customRange" onChange={(e) => { props.UpdateIntercept(e.target.value) }} />
-                {/* </FormGroup> */}
             </div>
         </div>
     )
 }
+
 export default connect(mapStateToProps, mapDispatchToProps)(SlopeAndIntercept)
 
-const Example = (props) => {
+
+// Tabs componet used to navigate between charts
+const Tabs = (props) => {
 
     let match = useRouteMatch()
     let state = props.mainState.regression.slopeIntercept.breadcrumb
@@ -96,6 +99,7 @@ const Example = (props) => {
                 <Grid item sm={12} lg={12} md={12} xs={12}>
                     <Nav tabs >
                         <NavItem>
+                            {/* active prop will take a boolean to make tab seems like active or not */}
                             <NavLink active={state.line} onClick={() => props.UpdateBreadcrumbState('line')} >
                                 <Link color="inherit" to={match.path + '/'}>
                                     Line Chart
@@ -122,4 +126,3 @@ const Example = (props) => {
         </div>
     );
 }
-// connect(mapStateToProps,mapDispatchToProps)(Example)

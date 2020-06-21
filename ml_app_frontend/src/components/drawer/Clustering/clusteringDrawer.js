@@ -169,9 +169,11 @@ function ResponsiveDrawerClustering(props) {
                 </Hidden>
             </nav>
             <main className={classes.content} id='mainGridHome'>
+                {/* Component placed here will be seen inside the main body of Drawer */}
                 <div className={classes.toolbar} />
                 <Switch>
                     <Route path='/clustering/blogs/clustering-introduction' >
+                        {/* Till date there is no component available for the stuff,yet passed a heading to fill the space. */}
                         <h1>Clustering-introduction</h1>
                     </Route>
                     <Route path='/clustering/blogs/kmeans' >

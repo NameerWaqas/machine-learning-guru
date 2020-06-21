@@ -1,17 +1,15 @@
 import React from 'react';
-import HomeView from './containers/home/view'
 import ResponsiveDrawerClassification from './components/drawer/Classification/classificationDrawer';
 import ResponsiveDrawerRegression from './components/drawer/Regression/regressionDrawer';
 import ResponsiveDrawerClustering from './components/drawer/Clustering/clusteringDrawer';
+import ResponsiveDrawer from './components/drawer/homepage/homeDrawer'
 import './App.css';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
-  useRouteMatch
 } from "react-router-dom";
-import 'aos/dist/aos.css'
+import 'aos/dist/aos.css' //CSS file for AOS package
 
 
 function App() {
@@ -21,13 +19,14 @@ function App() {
         <header className="App-header">
           <Switch>
             <Route exact path="/">
-              <HomeView view='home' />
+              <ResponsiveDrawer view='home' />
+              {/* 'view' prop is passed here to handle currently viewable component*/}
             </Route>
             <Route path="/about">
-              <HomeView view='about' />
+              <ResponsiveDrawer view='about' />
             </Route>
             <Route path="/contact">
-              <HomeView view='contact' />
+              <ResponsiveDrawer view='contact' />
             </Route>
             <Route path="/regression/blogs">
               <ResponsiveDrawerRegression />

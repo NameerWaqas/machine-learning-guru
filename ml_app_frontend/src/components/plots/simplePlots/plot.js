@@ -21,14 +21,14 @@ function Chart(props) {
                     width: wid, height: hei,
                     title: props.title, xaxis: {
                         ticks: 'outside',
-                        tick0: 0,
+                        tick0: props.xCord[0],
                         dtick: 1,
                         tickcolor: '#000'
                     },
                     yaxis: {
                         autotick: true,
                         ticks: 'outside',
-                        tick0: 0,
+                        tick0: props.yCord[0],
                         dtick: 1,
                         tickcolor: '#000'
                     },
