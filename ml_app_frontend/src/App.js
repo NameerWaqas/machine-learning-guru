@@ -3,6 +3,7 @@ import ResponsiveDrawerClassification from './components/drawer/Classification/c
 import ResponsiveDrawerRegression from './components/drawer/Regression/regressionDrawer';
 import ResponsiveDrawerClustering from './components/drawer/Clustering/clusteringDrawer';
 import ResponsiveDrawer from './components/drawer/homepage/homeDrawer'
+import HomePage from './components/drawer/homepage/homePage'
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -19,7 +20,7 @@ function App() {
         <header className="App-header">
           <Switch>
             <Route exact path="/">
-              <ResponsiveDrawer view='home' />
+              <HomePage view='home' />
               {/* 'view' prop is passed here to handle currently viewable component*/}
             </Route>
             <Route path="/about">

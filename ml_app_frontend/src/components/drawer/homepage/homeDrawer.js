@@ -6,7 +6,6 @@ import Divider from '@material-ui/core/Divider';
 import Drawer from '@material-ui/core/Drawer';
 import Hidden from '@material-ui/core/Hidden';
 import IconButton from '@material-ui/core/IconButton';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
@@ -21,11 +20,11 @@ import InfoIcon from '@material-ui/icons/Info';
 import PermContactCalendarIcon from '@material-ui/icons/PermContactCalendar';
 import { Link } from 'react-router-dom';
 import {
-    // Switch,  
+    Switch,  
     Route,
     useRouteMatch
 } from "react-router-dom";
-import { Switch } from '@material-ui/core';
+// import { Switch } from '@material-ui/core';
 import HomeComponent from '../homepage/homeComponet';
 import EmailIcon from '@material-ui/icons/Email';
 import Button from '@material-ui/core/Button';
@@ -36,7 +35,7 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import About from './aboutComponent'
-import wooden from '../../../images/backgrounds/wooden.jpg'
+// import wooden from '../../../images/backgrounds/wooden.jpg'
 
 const drawerWidth = 200;
 const useStyles = makeStyles((theme) => ({
@@ -140,6 +139,7 @@ function ResponsiveDrawer(props) {
     return (
         <div className={classes.root}>
             <CssBaseline />
+
             <AppBar position="fixed" className={classes.appBar}>
                 <Toolbar>
                     <IconButton
@@ -156,6 +156,7 @@ function ResponsiveDrawer(props) {
                     </Typography>
                 </Toolbar>
             </AppBar>
+
             <nav className={classes.drawer} aria-label="mailbox folders">
                 {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
                 <Hidden smUp implementation="css">
