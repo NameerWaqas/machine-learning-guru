@@ -47,7 +47,7 @@ export default function HomePage(props) {
                     </Typography>
                     <div className='appBarIcons'>
                         <IconButton ><Link to='/about'><InfoIcon id='icon' /></Link></IconButton>
-                        <IconButton  ><Link to='/contact'><PermContactCalendarIcon id='icon' /></Link></IconButton>
+                        <IconButton ><Link to='/contact'><PermContactCalendarIcon id='icon' /></Link></IconButton>
                         <IconButton >
                             <FormDialog />
                         </IconButton>
@@ -55,10 +55,7 @@ export default function HomePage(props) {
                 </Toolbar>
             </AppBar>
             <div style={{ marginTop: '10vh' }}></div>
-            <div id='marginControlDiv'>
-                <h2>ML GURU</h2>
-                <h3>Your Learning Curve!</h3>
-            </div>
+            
             <HomeComponent />
         </div>
     )
@@ -79,7 +76,7 @@ function FormDialog() {
     return (
         <div>
             <MailIcon id='icon' onClick={handleClickOpen} />
-            
+
             <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
                 <DialogTitle id="form-dialog-title">Subscribe</DialogTitle>
                 <DialogContent>

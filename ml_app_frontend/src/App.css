@@ -100,10 +100,10 @@ p {
 
 .appBarIcons{
     position: fixed;
-    right: 0;
+    right: 1%;
     display: inline-block;
     /* color: white; */
-    overflow: hidden;
+    overflow: hidden !important;
     display: flex;
     flex-direction: row;
 }
