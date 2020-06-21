@@ -1,0 +1,102 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none !important;
+    color: black !important;
+}
+
+.MuiToolbar-root {
+    background-color: #1A2930;
+}
+
+.mlGuruLogo {
+    color: white !important;
+    font-family: 'Courgette', cursive;
+}
+
+.imageAvatar {
+    margin: 0 !important;
+}
+
+h1, p {
+    margin: 0;
+}
+
+p {
+    text-align: justify;
+}
+
+.avatarAnchor, .avatarAnchor>* {
+    display: inline !important;
+}
+
+#chartDiv {
+    width: inherit;
+    height: 50vh;
+    overflow: hidden;
+}
+
+.sloperAndInterceptSlipder {
+    width: 50vh;
+}
+
+#homeDrawer {
+    /* height: 100vh; */
+    background-color: #EFEFEF;
+    margin: 0;
+    padding: 0;
+    /* width: ; */
+    overflow: hidden;
+}
+
+#cardTitle {
+    color: #1A2930;
+}
+
+#plotlyChartContainer{
+    min-width: inherit;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: white;
+}
+.blogTitle{
+    text-align: center;
+}
+#chartBreadcrumb{
+    background-color: #1A2930;
+    width: 100%;
+}
+.svg-container{
+    min-width: 50vw !important;
+}
+
+#homeImg{
+    width: 100%;
+    height: 90vh;
+}
+#marginControlDiv{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background-color:#082340 ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-size: cover;
+    color: #D6D6D6;
+    font-family: 'Courgette', cursive;
+    clip-path: polygon(0% 10%, 100% 0%, 100% 90%, 0% 100%);
+}
+#homeDrawerDefaultMargin{
+    margin-top: 10vh;
+    padding: 0;
+}
+@media screen and (max-width:900px) {
+
+}
