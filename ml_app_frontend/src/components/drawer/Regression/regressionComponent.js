@@ -48,10 +48,10 @@ export default function RegressionComponent() {
     return (
         
         // <Paper>
-            <Grid justify='center' alignItems='center' container spacing={1} id='mainGridHome'>
+            <Grid justify='center' alignItems='center' container spacing={2} id='mainGridHome'>
                 {
                     regCompData.map((obj, ind) => {
-                        return < Grid item xs={12} sm={12} md={8} lg={8} >
+                        return < Grid item xs={12} sm={12} md={6} lg={6} >
                             <Paper data-aos={(ind + 1) % 3 == 0 ? anim[0] : (ind + 1) % 3 == 1 ? anim[1] : anim[2]}>
                                 <SimpleCard title={obj.title} link={obj.link} />
                             </Paper>

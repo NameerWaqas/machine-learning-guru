@@ -19,11 +19,11 @@ function App() {
       <div className="App">
         <header className="App-header">
           <Switch>
-            <Route exact path="/">
+            <Route path="/">
               <HomePage view='home' />
               {/* 'view' prop is passed here to handle currently viewable component*/}
             </Route>
-            <Route path="/about">
+            {/* <Route path="/about">
               <ResponsiveDrawer view='about' />
             </Route>
             <Route path="/contact">
@@ -37,7 +37,7 @@ function App() {
             </Route>
             <Route path="/clustering/blogs">
               <ResponsiveDrawerClustering />
-            </Route>
+            </Route> */}
           </Switch>
         </header>
       </div>

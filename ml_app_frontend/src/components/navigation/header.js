@@ -97,6 +97,11 @@ const options = [
     'Clustering',
     'Recommendor Systems',
 ];
+const link=[
+    '/regression/blogs',
+    '/classification/blogs',
+    '/clustering/blogs',
+]
 
 const ITEM_HEIGHT = 48;
 
@@ -135,8 +140,8 @@ function LongMenu() {
                     },
                 }}
             >
-                {options.map((option) => (
-                    <Link to='/about'>
+                {options.map((option,ind) => (
+                    <Link to={link[ind]}>
                         <MenuItem  key={option} selected={option === 'Pyxis'}>
                             {option}
                         </MenuItem>
