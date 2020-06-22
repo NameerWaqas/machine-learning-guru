@@ -1,8 +1,4 @@
 import React from 'react';
-import ResponsiveDrawerClassification from './components/drawer/Classification/classificationDrawer';
-import ResponsiveDrawerRegression from './components/drawer/Regression/regressionDrawer';
-import ResponsiveDrawerClustering from './components/drawer/Clustering/clusteringDrawer';
-import ResponsiveDrawer from './components/drawer/homepage/homeDrawer'
 import HomePage from './components/drawer/homepage/homePage'
 import './App.css';
 import {
@@ -20,24 +16,8 @@ function App() {
         <header className="App-header">
           <Switch>
             <Route path="/">
-              <HomePage view='home' />
-              {/* 'view' prop is passed here to handle currently viewable component*/}
+              <HomePage/>
             </Route>
-            {/* <Route path="/about">
-              <ResponsiveDrawer view='about' />
-            </Route>
-            <Route path="/contact">
-              <ResponsiveDrawer view='contact' />
-            </Route>
-            <Route path="/regression/blogs">
-              <ResponsiveDrawerRegression />
-            </Route>
-            <Route path="/classification/blogs">
-              <ResponsiveDrawerClassification />
-            </Route>
-            <Route path="/clustering/blogs">
-              <ResponsiveDrawerClustering />
-            </Route> */}
           </Switch>
         </header>
       </div>
