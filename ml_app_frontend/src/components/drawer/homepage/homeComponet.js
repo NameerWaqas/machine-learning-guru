@@ -10,7 +10,6 @@ import MediaCard from '../../card/medaiCard/card'
 import Aos from 'aos'
 
 function HomeComponent(props) {
-
     useEffect(() => {
         Aos.init({ duration: 1000 })
     }, []);

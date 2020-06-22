@@ -110,3 +110,6 @@ p {
 #icon{
     color:white !important
 }
+.iconContainer:hover{
+    cursor: pointer;
+}
