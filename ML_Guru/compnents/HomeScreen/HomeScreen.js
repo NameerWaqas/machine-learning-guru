@@ -91,7 +91,7 @@ let DefaultHome = ({ navigation }) => {
 
 
 let ScreenReg = () => {
-
+    let RegStack = createStackNavigator()
     let RegMainScreen = ({ navigation }) => {
         return (
             <View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
@@ -111,10 +111,10 @@ let ScreenReg = () => {
         )
     }
     return (
-        <Stack.Navigator initialRouteName='DefaultRegression'>
-            <Stack.Screen name='DefaultRegression' component={RegMainScreen} />
-            <Stack.Screen name='SubRegScreen' component={SubRegScreen} />
-        </Stack.Navigator>
+        <RegStack.Navigator initialRouteName='DefaultRegression'>
+            <RegStack.Screen name='DefaultRegression' component={RegMainScreen} />
+            <RegStack.Screen name='SubRegScreen' component={SubRegScreen} />
+        </RegStack.Navigator>
     )
 }
 let ScreenClass = () => {

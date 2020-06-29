@@ -1,6 +1,10 @@
 export let stateObj = {
-    notes:['abc'],
-    user:{
-        auth:false
+    root: {
+        notes: [],
+        user: {
+            auth: false,
+            name:'',
+            email:''
+        }
     }
 }

@@ -9,33 +9,35 @@
 import React from 'react';
 import 'react-native-gesture-handler';
 import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
   View,
   Text,
-  StatusBar,
 } from 'react-native';
-
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
+import {Spinner,Content} from 'native-base'
 import Main from './compnents/main/main'
 import { Provider } from 'react-redux'
-import { store } from './redux/store'
-// const store = mainStore()
+import { store, persistor} from './redux/store'
+import { PersistGate} from 'redux-persist/integration/react'
+
 
 const App: () => React$Node = () => {
   return (
     <Provider store={store}>
-      <Main />
+      <PersistGate persistor={persistor} loading={<Lodaing/>}>
+        <Main />
+      </PersistGate>
     </Provider>
   );
 };
-
 export default App;
+
+let Lodaing=()=>{
+  return(
+    <View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
+      <Content justifyContent='center' alignItems='center'>
+      <Text style={{textAlign:'center'}}>Just a moment....</Text>
+      <Text style={{textAlign:'center'}}>LOADING....</Text>
+        <Spinner color='green' />
+      </Content>
+    </View>
+  )
+}

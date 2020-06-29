@@ -1,15 +1,15 @@
 import * as ActionTypes from './actionTypes'
-export const Handle_AddNote = (action) =>({
+export const Handle_AddNote = (param) =>({
     type: ActionTypes.ADD_NOTE,
-    payload: action
+    payload: param
 })
 
-export const Handle_DeleteNote = (action)=>({
+export const Handle_DeleteNote = (param)=>({
     type: ActionTypes.DELETE_NOTE,
-    payload:action
+    payload:param
 })
 
-export const Handle_Auth=(action)=>({
+export const Handle_Auth=(param)=>({
     type:ActionTypes.AUTH_CHECK,
-    payload:action
+    payload:param
 })

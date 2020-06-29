@@ -11,20 +11,19 @@ export default function SimpleCard(props) {
             <Card >
                 <CardItem>
                     <Item>
-                        <Left>
-                            <Text style={{ fontSize: 25 }}>Title</Text>
+                        <Left style={{flex:5}}>
+                            <Text style={{ fontSize: 25 }}>{props.title}</Text>
                         </Left>
-                        <Right>
-                            <Button transparent><Icon type='Entypo' name='cross' style={{ color: 'black' }} /></Button>
+                        <Right style={{flex:1}}>
+                            <Button transparent onPress={props.del}
+                            ><Icon type='Entypo' name='cross' style={{ color: 'black' }} /></Button>
                         </Right>
                     </Item>
                 </CardItem>
                 <CardItem>
                     <Item>
                         <Body>
-                            <Text>This is body of card Lorum epsum quod erat demonstrnadum
-                            This is body of card Lorum epsum quod erat demonstrnadum
-                            This is body of card Lorum epsum quod erat demonstrnadum
+                            <Text style={{textAlign:'left'}}>{props.note}
                         </Text>
                         </Body>
                     </Item>

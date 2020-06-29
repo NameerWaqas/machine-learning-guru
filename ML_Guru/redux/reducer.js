@@ -4,15 +4,17 @@ import {stateObj} from './state'
 export const reducer = (state= stateObj,action)=>{
     switch(action.type){
         case ActionTypes.ADD_NOTE:
-            state.notes.push(action.payload)
+            state.root.notes.push(action.payload)
             return {...state}
 
         case ActionTypes.DELETE_NOTE:
-            state.notes.pop(action.payload)
+            state.root.notes.pop(action.payload)
             return {...state}
 
         case ActionTypes.AUTH_CHECK:
-            state.user.auth = true
+            state.root.user.auth = true
+            state.root.user.name = action.payload.name
+            state.root.user.email = action.payload.email
             return {...state}
 
         default:
