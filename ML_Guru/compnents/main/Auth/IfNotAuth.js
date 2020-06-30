@@ -37,7 +37,6 @@ export default IfNotAuth = (props) => {
                     transparent bordered onPress={handleSubmit}>
                     <Text style={{ color: 'white', textAlign: 'center', flex: 1 }}>Get Started!</Text>
                 </Button>
-                {/* </Item> */}
             </Content>
         </ImageBackground>
     )

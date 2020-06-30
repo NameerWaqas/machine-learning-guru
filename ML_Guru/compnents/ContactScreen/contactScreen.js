@@ -1,11 +1,19 @@
 import React from 'react'
-import {View,Text} from 'react-native'
+import { View, Text, ScrollView } from 'react-native'
+import { Header, Body } from 'native-base'
 
-export default  ContactScreen = () => {
+export default ContactScreen = () => {
     return (
-        <>
-            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <ScrollView>
+            <View style={{ flex: 1 }}>
+                <Header style={{backgroundColor:'#1A2930'}}>
+                    <Body>
+                        <Text style={{fontSize:22,color:'white'}}>
+                            Contact Us
+                    </Text>
+                    </Body>
+                </Header>
                 <Text>This is Contact Screen</Text>
             </View>
-        </>)
+        </ScrollView>)
 }

@@ -18,6 +18,6 @@ export const reducer = (state= stateObj,action)=>{
             return {...state}
 
         default:
-            return {...state}
+            return state
     }
 }

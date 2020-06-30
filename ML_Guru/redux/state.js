@@ -5,6 +5,9 @@ export let stateObj = {
             auth: false,
             name:'',
             email:''
+        },
+        regression:{
+            searchFilter:''
         }
     }
 }

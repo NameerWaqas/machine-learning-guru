@@ -15,8 +15,8 @@ let mapDispatchToProps = (dispatch) => ({
 
 function Main(props) {
 
-    // console.disableYellowBox = true
-    // console.ignoredYellowBox = true
+    console.disableYellowBox = true
+    console.ignoredYellowBox = true
 
     return (
         <>
