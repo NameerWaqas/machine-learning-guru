@@ -1,6 +1,6 @@
 Dated: 21/June/2020
 Problem#1:
-    Description:Unable to make Plotly React cahrts responsive and fit to the screenas well.
+    Description:Unable to make Plotly React cahrts responsive and fit to the screen as well.
     *Source code for component will be find at 'src\components\plots\simplePlots\plot.js'
 
 Problem#2:

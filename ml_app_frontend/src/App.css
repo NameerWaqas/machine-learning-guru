@@ -97,6 +97,19 @@ p {
     margin-top: 10vh;
     padding: 0;
 }
-@media screen and (max-width:900px) {
 
+.appBarIcons{
+    position: fixed;
+    right: 1%;
+    display: inline-block;
+    /* color: white; */
+    overflow: hidden !important;
+    display: flex;
+    flex-direction: row;
+}
+#icon{
+    color:white !important
+}
+.iconContainer:hover{
+    cursor: pointer;
 }

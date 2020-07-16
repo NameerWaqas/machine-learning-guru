@@ -3,10 +3,24 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import SimpleCard from '../../card/simpleCard/card'
 import Aos from 'aos'
-
+import SlopeAndIntercept from './slope&interceptComp'
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+} from "react-router-dom";
 
 
 export default function RegressionComponent() {
+    return (
+        <Switch>
+            <Route exact path='/regression/blogs'><RegressionDefaultView /></Route>
+            <Route path='/regression/blogs/slope-and-intercept'><SlopeAndIntercept /></Route>
+        </Switch>
+    )
+}
+
+function RegressionDefaultView() {
     useEffect(() => {
         Aos.init({ duration: 1000 })
     }, []);
@@ -46,20 +60,17 @@ export default function RegressionComponent() {
     ]
     let anim = ['fade-up', 'fade-right', 'fade-left']
     return (
-        
-        // <Paper>
-            <Grid justify='center' alignItems='center' container spacing={1} id='mainGridHome'>
-                {
-                    regCompData.map((obj, ind) => {
-                        return < Grid item xs={12} sm={12} md={8} lg={8} >
-                            <Paper data-aos={(ind + 1) % 3 == 0 ? anim[0] : (ind + 1) % 3 == 1 ? anim[1] : anim[2]}>
-                                <SimpleCard title={obj.title} link={obj.link} />
-                            </Paper>
-                        </Grid>
-                    })
-                }
+        <Grid justify='center' alignItems='center' container spacing={2} id='mainGridHome'>
+            {
+                regCompData.map((obj, ind) => {
+                    return < Grid item xs={12} sm={12} md={6} lg={6} >
+                        <Paper data-aos={(ind + 1) % 3 == 0 ? anim[0] : (ind + 1) % 3 == 1 ? anim[1] : anim[2]}>
+                            <SimpleCard title={obj.title} link={obj.link} />
+                        </Paper>
+                    </Grid>
+                })
+            }
 
-            </Grid >
-        // </Paper>
+        </Grid >
     )
 }
