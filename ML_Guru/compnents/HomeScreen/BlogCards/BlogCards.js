@@ -34,10 +34,10 @@ export default class BlogCards extends React.Component {
                                     <Card style={{ height: 80, borderRadius: 20 }}>
                                         <Body style={{ flexDirection: 'row' }}>
                                             {/* <Item> */}
-                                            <Text style={{ fontSize: 25, flex: 6, padding: 10 }}>
+                                            <Text style={{ fontSize: 25, flex: 8, padding: 10 }}>
                                                 {obj.title}
                                             </Text>
-                                            <Button transparent>
+                                            <Button transparent onPress={()=>alert('regression')}>
                                                 <Icon name='arrowright' type='AntDesign' style={{color:'black'}} />
                                             </Button>
                                             {/* </Item> */}

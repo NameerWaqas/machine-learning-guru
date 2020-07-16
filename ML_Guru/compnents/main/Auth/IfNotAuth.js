@@ -22,9 +22,6 @@ export default IfNotAuth = (props) => {
                 </Body>
             </Header>
             <Content padder justifyContent='center'>
-                <Text style={{ fontWeight: 'bold', fontSize: 40, color: 'white', textAlign: 'center' }}>
-                    Your Learning Curve!
-                </Text>
                 <Item style={{ marginBottom: 10 }}>
                     <Input placeholderTextColor='white' placeholder='Enter Your Name'
                         onChangeText={(t) => handleName(t)} style={{ color: 'white' }} />

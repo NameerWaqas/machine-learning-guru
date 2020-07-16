@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Image } from 'react-native';
 import { Container, Header, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body } from 'native-base';
-import regressionCardImage from '../../static/images/HomeComponetCardsImages/regressionCardImage.png'
 
 
 export default function CardShowcase(props){
